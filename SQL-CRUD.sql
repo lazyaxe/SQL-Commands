@@ -28,11 +28,13 @@ CREATE TABLE students_details
 */
 --Use only single inverted quotes for string.
 INSERT INTO students_details(name, age, grade)
-VALUES ('Joe', 23, 'A+'),
-	   ('Candice', 26, 'C-');
+VALUES
+	('Joe', 23, 'A+'),
+	('Candice', 26, 'C-');
 
 INSERT INTO students_details(ID, name, age, grade)
-VALUES (416323245, 'Allan', 27, 'A+');
+VALUES
+	(416323245, 'Allan', 27, 'A+');
 
 --To Read/Print the table:
 SELECT * 
@@ -55,31 +57,31 @@ WHERE grade = 'C-'
 
 --Updating Values
 UPDATE students_details
-SET grade='B+'
+SET grade = 'B+'
 WHERE Name = 'Candice';
 
 SELECT *
 FROM students_details;
 
 UPDATE students_details
-SET name='Francis'
-WHERE grade='C-';
+SET name = 'Francis'
+WHERE grade = 'C-';
 
 UPDATE students_details
 SET ID=416323243
-WHERE  name='Francis';
+WHERE  name = 'Francis';
 
 SELECT *
 FROM students_details;
 
---Delete:
+--Deleting an specified row/record:
 DELETE FROM students_details
-WHERE name ='Joe';
+WHERE name = 'Joe';
 
 SELECT *
 FROM students_details;
 
-
+--> To know about the entities/attributes/columns's name, datatype etc... of the table/relation:
 SELECT column_name, data_type, is_nullable, column_default
 FROM information_schema.columns
 WHERE table_name = 'students_details';
