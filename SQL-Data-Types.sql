@@ -1,3 +1,4 @@
+--> Different numeric datatypes
 CREATE TABLE Different_datatypes
 (
 	--Different data types in PostgreSQL 
@@ -8,28 +9,37 @@ CREATE TABLE Different_datatypes
 	is_true BOOL,
 	rating REAL
 );
+ 
+INSERT INTO Different_datatypes(age, price, percent, is_true, rating)
+VALUES 
+	(211, 2655.32, 45.23, TRUE, 65565626.323);
+
+SELECT *
+FROM Different_datatypes;
 
 INSERT INTO Different_datatypes(age, price, percent, is_true, rating)
-VALUES (211, 2655.32, 45.23, TRUE, 65565626.323);
+VALUES
+	(211, 2655.32, 45.23, TRUE, 65565626.323);
 
-SELECT * FROM Different_datatypes;
+SELECT * 
+FROM Different_datatypes;
 
-INSERT INTO Different_datatypes(age, price, percent, is_true, rating)
-VALUES (211, 2655.32, 45.23, TRUE, 65565626.323);
-
-SELECT * FROM Different_datatypes;--The ID will be updated and different for row 2 even though the field values are the same.
-
+--> Different string datatypes
 CREATE TABLE Different_datatypes_strings
 (
 	OTP CHAR(4),
 	email VARCHAR(100),
 	address TEXT
 );
+
 INSERT INTO Differnt_datatypes_strings
-VALUES('0231', 'itisharshsharma18@gmail.com', 'I am homeless');
+VALUES
+	('0231', 'itisharshsharma18@gmail.com', 'I am homeless');
 
-SELECT * FROM Different_datatypes_strings;
+SELECT *
+FROM Different_datatypes_strings;
 
+--> Different Date and Time datatypes
 CREATE TABLE DATEandTIME_Datatypes
 (
 	DateOfBirth DATE,
